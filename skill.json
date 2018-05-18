@@ -1,0 +1,30 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "ja-JP": {
+          "summary": "日本語の発音をチェックします",
+          "examplePhrases": [
+            "アレクサ、パロゲームを開いて",
+            "アレクサ、パロゲームをスタート",
+            "アレクサ、パロゲームを開いて、私の出身地はベトナムですをチェックして"
+          ],
+          "name": "パロゲーム",
+          "description": "発音を聞いてからそのまま返事する。自分の日本語の発音をチェックします"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "テスト",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        }
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "パロゲーム",
+      "types": [
+        {
+          "name": "YesST",
+          "values": [
+            {
+              "id": "Y",
+              "name": {
+                "value": "はい",
+                "synonyms": [
+                  "いいよ",
+                  "完了",
+                  "OK",
+                  "了解",
+                  "お願いします",
+                  "よろしく",
+                  "よろしくお願いします",
+                  "チェックします",
+                  "チェックしたいんです",
+                  "お願い",
+                  "いい",
+                  "良い"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "NoST",
+          "values": [
+            {
+              "id": "N",
+              "name": {
+                "value": "いいえ",
+                "synonyms": [
+                  "いや",
+                  "NO",
+                  "大丈夫です",
+                  "いらないです",
+                  "チェックしない",
+                  "チェックしたくない"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "ParrotIntent",
+          "slots": [
+            {
+              "name": "Phrase",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "{Phrase} をチェックして",
+            "{Phrase} をチェックしてもらえませんか",
+            "{Phrase} の発音は自然ですか",
+            "{Phrase} をチェックしてください",
+            "{Phrase} をチェックしていただけませんか",
+            "{Phrase} の発音は大丈夫ですか"
+          ]
+        },
+        {
+          "name": "RouteIntent",
+          "slots": [
+            {
+              "name": "Yes",
+              "type": "YesST"
+            },
+            {
+              "name": "No",
+              "type": "NoST"
+            }
+          ],
+          "samples": [
+            "{Yes}",
+            "{No}"
+          ]
+        }
+      ]
+    }
+  }
+}
